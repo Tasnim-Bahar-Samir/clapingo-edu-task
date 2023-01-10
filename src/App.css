@@ -16,3 +16,10 @@
 .color-secondary{
   color: #FF736A;
 }
+.download-btn{
+  border: 1px solid #FF736A;
+  transition: all .5 ease-in-out;
+}
+.download-btn:hover{
+  background-color: #FF736A;
+}

@@ -24,7 +24,7 @@ const TrialSection = () => {
         },
     ]
   return (
-    <div className='lg:flex xl:gap-40 md:gap-12  mt-[120px] ' >
+    <div className='md:flex xl:gap-40 md:gap-12  mt-[120px] ' >
         <div className='px-10 md:pl-16 xl:pl-[120px] grid grid-cols-2 gap-8 md:w-1/2 py-16' style={{background:'linear-gradient(90deg, #00D2FF -13.02%, rgba(0, 210, 255, 0) 103.77%)'}}>
             {data.map(d => (
                 <div key={d._id} className={`p-1 rounded-xl flex items-center justify-center text-white text-center ${d._id === 3 && 'ml-4 -mr-4'} ${d._id === 4 && 'ml-4 -mr-4'}`} style={{backgroundColor:'#3A3636'}}>

@@ -1,3 +1,4 @@
+import { GoogleAuthProvider } from 'firebase/auth';
 import React, { useContext, useState } from 'react'
 import { useForm } from 'react-hook-form';
 import { toast } from 'react-hot-toast';
@@ -6,7 +7,7 @@ import { authProvider } from '../../Contexts/Usercontext';
 
 const Login = () => {
     const navigate = useNavigate()
-    const{userLogin} = useContext(authProvider)
+    const{userLogin, googleLogin} = useContext(authProvider)
     const {register, handleSubmit, formState:{errors}} = useForm();
     const[error,setError] = useState('')
     const handleLogin = (data)=>{
@@ -24,11 +25,21 @@ const Login = () => {
             setError("Invalid email or password.")
         })
     }
+
+    const googleProvider = new GoogleAuthProvider()
+    const handleGoogle = ()=>{
+      googleLogin(googleProvider)
+      .then(()=>{
+        navigate('/')
+        toast.success('Successfuly LoggedIn')
+      })
+      .catch(err => console.log(err))
+    }
   return (
 
     <div>
-        <div className='mb-24'>
-        <form onSubmit={handleSubmit(handleLogin)} className="mx-auto border-2 p-5 rounded-md mt-14 text-left md:w-[500px]" >
+        <div className='mb-24 mx-auto border-2 p-5 rounded-md mt-14 text-left md:w-[500px]'>
+        <form onSubmit={handleSubmit(handleLogin)} className="" >
             <h3 className='text-2xl font-semibold  my-3'>Login</h3>
             <div className="form-control w-full ">
             <label className="label">
@@ -58,6 +69,8 @@ const Login = () => {
           <button type="submit" className="btn primary-bg border-0 w-full mt-4">Login</button>
           <p className="text-center text-sm mt-[6px]">New to this website?<Link to='/register' className="text-secondary">Register</Link></p>
         </form>
+        <div className="divider">OR</div>
+        <button onClick={handleGoogle} className="btn btn-outline w-full">CONTINUE WITH GOOGLE</button>
     </div>
     </div>
   )

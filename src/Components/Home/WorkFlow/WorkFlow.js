@@ -5,9 +5,9 @@ import img from '../../../assets/images/Subscribe & plans 1.png'
 const WorkFlow = () => {
     
   return (
-    <div className='px-20 md:px-16 xl:px-[120px]'>
+    <div className='px-20 md:px-16 mb-20 xl:px-[120px]'>
         <h1 className='text-4xl mt-28 mb-4 font-semibold' style={{color:'#001F27'}}>How it works?</h1>
-        <div className='grid md:grid-cols-3 md:gap-24'>
+        <div className='grid md:grid-cols-3 md:gap-10 xl:gap-24'>
         
         <div>
             <FlowCard title="1. Create Account" details="Create your account using phone number or email and take a free trial at ₹1."/>
@@ -15,7 +15,7 @@ const WorkFlow = () => {
         </div>
         <div className='h-[510px] relative mb-10 md:mb-0'>
             <img src={img} className='w-full h-full' alt="" />
-            <div className='h-44 absolute w-full bottom-0' style={{background:'linear-gradient(180deg, rgba(251, 251, 253, 0) -50%, #FBFBFD 74.21%)', filter:'blur(10px)'}}>
+            <div className='h-44 absolute w-full -bottom-4' style={{background:'linear-gradient(180deg, rgba(251, 251, 253, 0) -50%, #FBFBFD 74.21%)', filter:'blur(10px)'}}>
 
             </div>
         </div>
