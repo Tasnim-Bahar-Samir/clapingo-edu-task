@@ -28,7 +28,7 @@ const Offers = () => {
     },
   ];
   return (
-    <div className="mt-28">
+    <div className="mt-28 px-20 md:px-20 xl:px-[120px]">
       <h1
         className="text-center text-4xl font-semibold mb-9"
         style={{ color: "#001F27" }}
@@ -37,13 +37,13 @@ const Offers = () => {
       </h1>
       <div className="grid md:grid-cols-3 gap-6">
         {offers.map((offer) => (
-          <div style={{backgroundImage: offer.img}} key={offer._id} className="card shadow-xl">
-            <figure>
-              <img className=" h-60 w-full" src={offer.img} alt="Offer Img" />
+          <div style={{backgroundImage: offer.img}} key={offer._id} className="card shadow-xl relative h-[400px]">
+            <figure className="h-full rounded-lg">
+              <img className=" h-full w-full rounded-lg" src={offer.img} alt="Offer Img" />
             </figure>
-            <div className="card-body card-bg">
-              <h2 className="color-primary">{offer.title}</h2>
-              <p>{offer.details}</p>
+            <div className="p-2 card-bg h-1/3 absolute bottom-0 rounded-bl-lg rounded-br-lg w-full">
+              <h2 className="color-primary text-[12px]">{offer.title}</h2>
+              <p className="text-white text-[16px]">{offer.details}</p>
             </div>
           </div>
         ))}
