@@ -1,0 +1,12 @@
+.card-bg{
+    background:  linear-gradient(180deg, rgba(196, 196, 196, 0) -14.34%, #C4C4C4 116.43%);
+    backdrop-filter: blur(32.5px);
+}
+/* .card-2{
+    background: linear-gradient(180deg, rgba(196, 196, 196, 0) -14.34%, #C4C4C4 116.43%);
+    backdrop-filter: blur(32.5px);
+}
+.card-3{
+    background: linear-gradient(180deg, rgba(196, 196, 196, 0) -14.34%, #C4C4C4 116.43%);
+    backdrop-filter: blur(32.5px);
+} */
