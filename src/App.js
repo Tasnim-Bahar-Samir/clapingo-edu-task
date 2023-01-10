@@ -1,10 +1,36 @@
+import { Toaster } from 'react-hot-toast';
+import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 import './App.css';
+import Home from './Components/Home/Home';
+import Login from './Components/Login/Login';
+import Register from './Components/Register/Register';
+import Main from './Layouts/Main';
 
 function App() {
+  const router = createBrowserRouter([
+    {
+      path:'/',
+      element:<Main/>,
+      children: [
+        {
+          path:'/',
+          element:<Home/>,
+        },
+        {
+          path:'/login',
+          element:<Login/>
+        },
+        {
+          path:'/register',
+          element:<Register/>
+        }
+      ]
+    }
+  ])
   return (
     <div className="App">
-      <h1 className='text-red-600 text-4xl'>HEllo</h1>
-      <button className='btn btn-success'>HEllo</button>
+      <Toaster/>
+      <RouterProvider router={router}></RouterProvider>
     </div>
   );
 }
