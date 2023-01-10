@@ -1,16 +1,16 @@
 import React, { useContext } from 'react'
 import { Link, useNavigate } from 'react-router-dom'
 import logo from '../../assets/images/Clapingo Logo.png'
-// import { authProvider } from '../Contexts/UserContext'
-// import {FaUserAlt} from 'react-icons/fa'
+import {FaUserAlt} from 'react-icons/fa'
+import { authProvider } from '../../Contexts/Usercontext'
 const Navbar = () => {
-    // const{user,userLogOut} = useContext(authProvider)
-    // const navigate = useNavigate()
-    // console.log(user)
-    // const handleLogout = ()=>{
-    //     userLogOut()
-    //     navigate('/login')
-    // }
+    const{user,userLogOut} = useContext(authProvider)
+    const navigate = useNavigate()
+    console.log(user)
+    const handleLogout = ()=>{
+        userLogOut()
+        navigate('/login')
+    }
   return (
     <div className="navbar bg-base-100 md:px-10 px-2 h-[90px] shadow-sm">
   <div className="navbar-start">
@@ -32,9 +32,6 @@ const Navbar = () => {
           </ul>
         </li>
         <li><a>Contact Us</a></li>
-        <div className='form-control'>
-    <input type="text" placeholder="Search" className="input input-bordered" />
-  </div>
       </ul>
     </div>
     <Link to='/' className="normal-case md:text-4xl text-xl font-bold flex items-center"><img className='w-24' src={logo} alt="" /></Link>
@@ -56,10 +53,7 @@ const Navbar = () => {
       <li><a>Contact Us</a></li>
     </ul>
   </div>
-  {/* <div className="navbar-end  flex md:gap-5 gap-1">
-  <div className='form-control md:block hidden'>
-    <input type="text" placeholder="Search" className="input input-bordered" />
-  </div>
+  <div className="navbar-end  flex md:gap-5 gap-1">
   {
     user?.uid?
     <div className="dropdown dropdown-end">
@@ -80,9 +74,9 @@ const Navbar = () => {
       </ul>
     </div>
     :
-    <Link to='/login' className='btn'>Login</Link>
+    <Link to='/login' className='px-6 py-[10px] primary-bg rounded-[80px] text-white flex items-center gap-3'><FaUserAlt/> Login</Link>
   }
-  </div> */}
+  </div>
 </div>
   )
 }
