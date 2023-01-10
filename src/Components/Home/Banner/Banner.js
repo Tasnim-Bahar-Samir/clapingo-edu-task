@@ -2,7 +2,7 @@ import React from "react";
 import bannerImg from '../../../assets/images/banner.jpg'
 const Banner = () => {
   return (
-    <div className="flex gap-1 md:flex-row flex-col-reverse px-10 md:px-20 xl:px-[120px] mt-14">
+    <div className="flex gap-1 md:flex-row flex-col-reverse px-10 md:px-16 xl:px-[120px] mt-14">
       <div>
         <h1 className="xl:text-5xl md:text-4xl text-2xl font-bold">
           Hone your english <br /> speaking skills over{" "} <br />

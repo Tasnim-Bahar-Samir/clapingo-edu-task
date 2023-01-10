@@ -28,7 +28,7 @@ const Offers = () => {
     },
   ];
   return (
-    <div className="mt-28 px-20 md:px-20 xl:px-[120px]">
+    <div className="mt-28 px-20 md:px-16 xl:px-[120px]">
       <h1
         className="text-center text-4xl font-semibold mb-9"
         style={{ color: "#001F27" }}

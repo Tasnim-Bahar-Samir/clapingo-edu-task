@@ -5,7 +5,7 @@ import img from '../../../assets/images/Subscribe & plans 1.png'
 const WorkFlow = () => {
     
   return (
-    <div className='px-20 md:px-20 xl:px-[120px]'>
+    <div className='px-20 md:px-16 xl:px-[120px]'>
         <h1 className='text-4xl mt-28 mb-4 font-semibold' style={{color:'#001F27'}}>How it works?</h1>
         <div className='grid md:grid-cols-3 md:gap-24'>
         
