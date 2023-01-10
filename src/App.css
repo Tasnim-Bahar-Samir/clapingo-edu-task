@@ -1,7 +1,18 @@
 .App {
-  text-align: center;
+  
 }
 
 .primary-bg{
   background: linear-gradient(360deg, #52A49A -65.93%, #00CDAC 100%);
+}
+
+.secondary-bg{
+  background-color: #FF736A;
+}
+.color-primary{
+  color: #139980;
+}
+
+.color-secondary{
+  color: #FF736A;
 }

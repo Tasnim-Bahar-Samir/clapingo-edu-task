@@ -1,0 +1,9 @@
+ul a{
+    color: #060606;
+    cursor: pointer;
+    font-size: 18px;
+    transition: all .3 ease-in-out;
+}
+ul a:hover{
+    color: #3ecaba;
+}
